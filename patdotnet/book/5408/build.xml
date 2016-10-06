@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE project [
+        <!ENTITY linuxconfig SYSTEM "file:./linux-config.xml">
+        <!ENTITY osxconfig SYSTEM "file:./osx-config.xml">
+        <!ENTITY winconfig SYSTEM "file:./win-config.xml">
+]>
+<project name="devspace.commons project" default="build" basedir=".">
+    &osxconfig;
+    <!--&linuxconfig;-->
+    <!--&winconfig;-->
+    <target name="test">
+        <echo message="Output is ${project.userdir}" />
+    </target>
+    <target name="init">
+        <mkdir dir="${project.builddir}" />
+        <copy file="${commons.dir}/devspace.commons.dll" todir="${project.builddir}" />
+        <copy file="${commons.dir}/devspace.commons.loader.dll" todir="${project.builddir}" />
+        <copy file="${commons.dir}/C5.dll" todir="${project.builddir}" />
+        <!--<echo message="Building the basic debug manager" />
+        <csc optimize="true" debug="${project.build.debug}" warnLevel="4" 
+            unsafe="false" targetType="library" incremental="false" 
+            destFile="${project.builddir}/dbg.dll" > 
+            <src dir="DbgOut">
+                <include name="dbgmgr.cs" />
+            </src>
+            <reference file="${testCSC.dll}" /> 
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="def3" unless="def3.property"/> 
+        </csc> 
+        <echo message="done..." />
+        <echo message="Building the tracer assembly" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4" 
+            unsafe="false" targetType="library" incremental="false" 
+            destFile="${project.builddir}/tracer.dll" > 
+            <src dir="tracer">
+                <include name="trace.cs" />
+                <include name="assertion.cs" />
+                <include name="definitions.cs" />
+                <include name="implementations.cs" />
+            </src>
+            <reference file="${project.log4netdir}/log4net.dll" /> 
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="LOGCONSOLE" />
+            <define name="def3" unless="def3.property"/> 
+        </csc> -->
+        <echo message="done..." />
+    </target>
+    <target name="chap01" depends="init"> 
+        <ant dir="chap01" antfile="build.xml" target="build" />
+    </target>
+    <target name="chap02" depends="init"> 
+        <ant dir="chap02" antfile="build.xml" target="build" />
+    </target>
+    <target name="chap03" depends="init"> 
+        <ant dir="chap03" antfile="build.xml" target="build" />
+    </target>
+    <target name="chap05" depends="init">
+        <echo message="Compiling Chap05.TranslationsDefinitions.dll" />
+        <csc optimize="true" debug="${project.build.debug}" warnLevel="4" 
+            unsafe="false" targetType="library" incremental="false" 
+            destFile="${project.builddir}/Chap05.TranslationDefinitions.dll" > 
+            <src dir="Chap05.TranslationDefinitions">
+                <include name="**/*.cs" />
+            </src>
+            <reference file="${project.builddir}/devspace.commons.loader.dll" />
+            <reference file="${project.builddir}/devspace.commons.dll" />
+        </csc> 
+        <echo message="Done..." />
+        <echo message="Compiling Chap05.TranslationsImplementations.dll" />
+        <csc optimize="true" debug="${project.build.debug}" warnLevel="4" 
+            unsafe="false" targetType="library" incremental="false" 
+            destFile="${project.builddir}/Chap05.TranslationImplementations.dll" > 
+            <src dir="Chap05.TranslationImplementations">
+                <include name="**/*.cs" />
+            </src>
+            <reference file="${project.builddir}/Chap05.TranslationDefinitions.dll" /> 
+        </csc> 
+        <echo message="Done..." />
+    </target>
+    <target name="chap06" depends="init">
+        <echo message="Compiling Chap06.OddsAndEnds.dll" />
+        <csc optimize="true" debug="${project.build.debug}" warnLevel="4" 
+            unsafe="false" targetType="library" incremental="false" 
+            destFile="${project.builddir}/Chap06.OddsAndEnds.dll" > 
+            <src dir="Chap06.OddsAndEnds">
+                <include name="**/*.cs" />
+            </src>
+            <reference file="${project.builddir}/devspace.commons.loader.dll" />
+            <reference file="${project.builddir}/devspace.commons.dll" />
+            <reference file="${nunit.dir}/nunit.framework.dll" />
+        </csc> 
+        <echo message="Done..." />
+    </target>
+    <target name="build" depends="chap06">
+    </target>
+</project>
+

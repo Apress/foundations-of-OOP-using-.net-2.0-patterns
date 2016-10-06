@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project name="Chapter01" default="build" basedir=".">
+    <target name="init">
+    </target>
+    <target name="compile" depends="init">
+        <echo message="Building the first assembly" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4" 
+            unsafe="false" targetType="library" incremental="false" 
+            destFile="${project.builddir}/assembly1chap01.dll" > 
+            <src dir=".">
+                <include name="assembly1.cs" />
+                <include name="assembly1_second.cs" />
+            </src>
+            <reference file="${project.builddir}/dbg.dll" /> 
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="def3" unless="def3.property"/> 
+        </csc> 
+        <echo message="done..." />
+        <echo message="Building the second assembly" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4" 
+            unsafe="false" targetType="library" incremental="false" 
+            destFile="${project.builddir}/assembly2chap01.dll" > 
+            <src dir=".">
+                <include name="assembly2.cs" />
+            </src>
+            <reference file="${project.builddir}/dbg.dll" /> 
+            <reference file="${project.builddir}/assembly1chap01.dll" />
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="def3" unless="def3.property"/> 
+        </csc> 
+        <echo message="done..." />
+        <echo message="Building the main application" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4" 
+            unsafe="false" targetType="exe" incremental="false" 
+            mainClass = "MainApp" destFile="${project.builddir}/chap01.exe" > 
+            <src dir=".">
+                <include name="samples.cs" />
+                <include name="inheritance.cs" />
+                <include name="generics.cs" />
+                <include name="asynchronous.cs" />
+            </src>
+            <reference file="${project.builddir}/dbg.dll" /> 
+            <reference file="${project.builddir}/assembly1chap01.dll" /> 
+            <reference file="${project.builddir}/assembly2chap01.dll" /> 
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="def3" unless="def3.property"/> 
+        </csc> 
+        <echo message="done..." />
+    </target>
+    <target name="build" depends="compile">
+    </target>
+</project>
+

@@ -1,0 +1,108 @@
+[Global]
+CurrentProject=BookSources.vpj
+[ProjectDates]
+BookSources.vpj=20050423000648000
+[ActiveConfig]
+BookSources.vpj=Release
+[TreeExpansion2]
+- BookSources.vpj
+  - chap01
+  + chap02
+  + chap03
+  + chap04
+    + microkernel
+    + servers
+  + MainApplication
+  + patterns
+  + postcon
+    + lab1.1
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.2
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.3
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.4
+      + bin
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.5
+      + bin
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab2.1
+    + lab2.2
+    + lab2.3
+    + lab2.4
+    + lab2.5
+    + lab2.6
+scroll:0
+[State]
+SCREEN: 1280 854 0 22 1280 806 0 0 N 0 0 0 0 952 474
+CWD: 
+BUFFER: BN="chap01/assembly1_second.cs"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C#	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=1
+VIEW: LN=.355 CL=33 LE=0 CX=33 CY=20 WI=5 BI=23 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="chap01/assembly2.cs"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C#	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=1
+VIEW: LN=.228 CL=99 LE=0 CX=99 CY=10 WI=5 BI=383 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="chap01/build.xml"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=XML	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=70 ESBU2=-1
+VIEW: LN=.451 CL=69 LE=0 CX=69 CY=0 WI=5 BI=385 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="build.xml"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=XML	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=70 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=5 BI=386 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="chap01/samples.cs"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C#	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.421 CL=20 LE=0 CX=20 CY=16 WI=5 BI=387 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="chap01/assembly1.cs"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C#	HM=0 MF=864 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=1
+VIEW: LN=.449 CL=22 LE=0 CX=22 CY=16 WI=5 BI=388 HT=0 HN=0 HF=0 HC=4
+WINDOW: 75 75 665 348 0 0 N  WF=0 WT=5 "System,10,0,1"
+BUFFER: BN="chap01/assembly1.cs"
+VIEW: LN=.174 CL=36 LE=0 CX=29 CY=12 WI=538 BI=388 HT=0 HN=0 HF=0 HC=4
+WINDOW: 50 50 665 348 0 0 N  WF=0 WT=1 "System,10,0,1"
+BUFFER: BN="chap01/samples.cs"
+VIEW: LN=.421 CL=20 LE=0 CX=15 CY=16 WI=537 BI=387 HT=0 HN=0 HF=0 HC=4
+WINDOW: 25 25 665 348 0 0 N  WF=0 WT=4 "System,10,0,1"
+BUFFER: BN="build.xml"
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=1 WI=535 BI=386 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 665 348 0 0 N  WF=0 WT=3 "System,10,0,1"
+BUFFER: BN="chap01/build.xml"
+VIEW: LN=.451 CL=69 LE=0 CX=49 CY=0 WI=534 BI=385 HT=0 HN=0 HF=0 HC=4
+WINDOW: 100 100 665 348 0 0 N  WF=0 WT=6 "System,10,0,1"
+BUFFER: BN="chap01/assembly2.cs"
+VIEW: LN=.228 CL=99 LE=0 CX=75 CY=10 WI=533 BI=383 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 665 348 0 0 N  WF=0 WT=7 "System,10,0,1"
+BUFFER: BN="chap01/assembly1_second.cs"
+VIEW: LN=.355 CL=33 LE=0 CX=19 CY=0 WI=165 BI=23 HT=0 HN=0 HF=0 HC=4
+WINDOW: 25 25 665 365 0 0 M  WF=0 WT=2 "Default Fixed Font,10,0,1"
+BUFFER: BN="chap01/assembly1.cs"
+VIEW: LN=.174 CL=36 LE=0 CX=36 CY=11 WI=532 BI=388 HT=0 HN=0 HF=0 HC=4
+FILEHIST: 9
+../../../Desktop/didiwiki-0.5/src/wiki.c
+../../posi-sync/current/client/default.build
+default.build
+build.xml
+chap01/build.xml
+chap01/assembly1_second.cs
+chap01/samples.cs
+chap01/assembly2.cs
+chap01/assembly1.cs

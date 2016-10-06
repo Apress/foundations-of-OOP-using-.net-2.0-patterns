@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/"  
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+ targetNamespace="http://webservices.amazon.com/AWSSimpleQueueService/2004-10-14"
+ xmlns:tns="http://webservices.amazon.com/AWSSimpleQueueService/2004-10-14">
+ 
+  <types>
+	<xs:schema 
+	 targetNamespace="http://webservices.amazon.com/AWSSimpleQueueService/2004-10-14"
+	 xmlns:tns="http://webservices.amazon.com/AWSSimpleQueueService/2004-10-14"
+	 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified">
+	
+	    
+	  <xs:element name="QueueEntryBody" type="xs:string" />
+	  <xs:element name="QueueEntryId" type="xs:string" />
+	  <xs:element name="QueueId" type="xs:string" />
+	  <xs:element name="QueueName" type="xs:string" />
+	  <xs:element name="ReadLockTimeoutSeconds" type="xs:integer" />
+	  <xs:element name="SubscriptionId" type="xs:string" />
+	  <xs:element name="QueueNamePrefix" type="xs:string" />
+	 
+	  <xs:element name ="QueueEntry">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="QueueEntryId" type="xs:string"/>
+	        <xs:element name="QueueEntryBody" type="xs:string"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="QueueEntries">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:QueueEntry" minOccurs="0" maxOccurs="unbounded" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="QueueEntryBodies">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:QueueEntryBody" minOccurs="0" maxOccurs="unbounded" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="QueueEntryIds" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:QueueEntryId" minOccurs="0" maxOccurs="unbounded" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element  name="Queues" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Queue" minOccurs="0" maxOccurs="unbounded" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="Queue" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:QueueId" />
+	        <xs:element ref="tns:QueueName" />
+	        <xs:element ref="tns:ReadLockTimeoutSeconds" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	 <xs:element name="SimpleQueueServiceError">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="ErrorCode" type="xs:string" />
+	        <xs:element name="ReasonText" type="xs:string" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	 <xs:complexType name="CreateQueueRequest" >
+	   <xs:sequence>
+	     <xs:element ref="tns:QueueName" minOccurs="0" />
+	     <xs:element ref="tns:ReadLockTimeoutSeconds" minOccurs="0" />
+	   </xs:sequence>
+	 </xs:complexType>
+	
+	 <xs:element name="CreateQueue" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:SubscriptionId" />
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:CreateQueueRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:CreateQueueRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element> 
+	
+	  <xs:element name="CreateQueueResult" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0" />
+	        <xs:element ref="tns:SimpleQueueServiceError" minOccurs="0" />
+	        <xs:element ref="tns:QueueId" minOccurs="0" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="CreateQueueResponse">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs="0" />
+	        <xs:element ref="tns:CreateQueueResult" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:complexType name="ListMyQueuesRequest" >
+	    <xs:sequence>
+	      <xs:element ref="tns:QueueNamePrefix" minOccurs="0" />
+	    </xs:sequence>
+	  </xs:complexType>
+	  
+	 <xs:element name="ListMyQueues" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:SubscriptionId" />
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:ListMyQueuesRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:ListMyQueuesRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element> 
+	
+	  <xs:element name="ListMyQueuesResult" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0"/>
+	        <xs:element ref="tns:SimpleQueueServiceError" minOccurs="0" />
+	        <xs:element ref="tns:Queues" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="ListMyQueuesResponse" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs="0" />
+	        <xs:element ref="tns:ListMyQueuesResult" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	
+	  <xs:complexType name="DeleteQueueRequest" >
+	    <xs:sequence>
+	      <xs:element ref="tns:QueueName" minOccurs="0" />
+	      <xs:element ref="tns:QueueId" minOccurs="0" />
+	    </xs:sequence>
+	  </xs:complexType>
+	  
+	 <xs:element name="DeleteQueue" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:SubscriptionId" />
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:DeleteQueueRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:DeleteQueueRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element> 
+	
+	  <xs:element name="DeleteQueueResult" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0" />
+	        <xs:element ref="tns:SimpleQueueServiceError" minOccurs="0" />
+	        <xs:element name="Status" type="xs:string" minOccurs="0" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="DeleteQueueResponse" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs="0" />
+	        <xs:element ref="tns:DeleteQueueResult" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:complexType name="ConfigureQueueRequest" >
+	    <xs:sequence>
+	      <xs:element ref="tns:QueueName" minOccurs="0" />
+	      <xs:element ref="tns:QueueId" minOccurs="0" />
+	      <xs:element ref="tns:ReadLockTimeoutSeconds" minOccurs="0" />
+	    </xs:sequence>
+	  </xs:complexType>
+	  
+	 <xs:element name="ConfigureQueue" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:SubscriptionId" />
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:ConfigureQueueRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:ConfigureQueueRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element> 
+	
+	  <xs:element name="ConfigureQueueResult" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0" />
+	        <xs:element ref="tns:SimpleQueueServiceError" minOccurs="0" />
+	        <xs:element name="Status" type="xs:string" minOccurs="0" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="ConfigureQueueResponse" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs="0" />
+	        <xs:element ref="tns:ConfigureQueueResult" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:complexType name="EnqueueRequest" >
+	    <xs:sequence>
+	      <xs:element ref="tns:QueueName" minOccurs="0" />
+	      <xs:element ref="tns:QueueId" minOccurs="0" />
+	      <xs:element ref="tns:QueueEntryBodies" />
+	    </xs:sequence>
+	  </xs:complexType>
+	  
+	 <xs:element name="Enqueue" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:SubscriptionId" />
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:EnqueueRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:EnqueueRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element> 
+	
+	  <xs:element name="EnqueueResult" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0" />
+	        <xs:element ref="tns:SimpleQueueServiceError" minOccurs="0" />
+	        <xs:element name="Status" type="xs:string" minOccurs="0" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="EnqueueResponse" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs="0" />
+	        <xs:element ref="tns:EnqueueResult" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:complexType name="ReadRequest" >
+	    <xs:sequence>
+	      <xs:element ref="tns:QueueName" minOccurs="0" />
+	      <xs:element ref="tns:QueueId" minOccurs="0" />
+	      <xs:element name="ReadCount" type="xs:integer" minOccurs="0" />
+	    </xs:sequence>
+	  </xs:complexType>
+	  
+	 <xs:element name="Read" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:SubscriptionId" />
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:ReadRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:ReadRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element> 
+	
+	  <xs:element name="ReadResult" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0" />
+	        <xs:element ref="tns:SimpleQueueServiceError" minOccurs="0" />
+	        <xs:element ref="tns:QueueEntries" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="ReadResponse" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs="0" />
+	        <xs:element ref="tns:ReadResult" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:complexType name="DequeueRequest" >
+	    <xs:sequence>
+	      <xs:element ref="tns:QueueName" minOccurs="0" />
+	      <xs:element ref="tns:QueueId" minOccurs="0" />
+	      <xs:element ref="tns:QueueEntryIds" />
+	    </xs:sequence>
+	  </xs:complexType>
+	  
+	 <xs:element name="Dequeue" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:SubscriptionId" />
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:DequeueRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:DequeueRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element> 
+	
+	  <xs:element name="DequeueResult" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0" />
+	        <xs:element ref="tns:SimpleQueueServiceError" minOccurs="0" />
+	        <xs:element name="Status" type="xs:string" minOccurs="0"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="DequeueResponse" >
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs ="0"/>
+	        <xs:element ref="tns:DequeueResult" />
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	  <xs:element name="Request">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="IsValid" type="xs:string" minOccurs="0"/>
+	        <xs:element name="CreateQueueRequest" type="tns:CreateQueueRequest" minOccurs="0"/>
+	        <xs:element name="ListMyQueuesRequest" type="tns:ListMyQueuesRequest" minOccurs="0"/>
+	        <xs:element name="DeleteQueueRequest" type="tns:DeleteQueueRequest" minOccurs="0"/>
+	        <xs:element name="ConfigureQueueRequest" type="tns:ConfigureQueueRequest" minOccurs="0"/>
+	        <xs:element name="EnqueueRequest" type="tns:EnqueueRequest" minOccurs="0"/>
+	        <xs:element name="ReadRequest" type="tns:ReadRequest" minOccurs="0"/>
+	        <xs:element name="DequeueRequest" type="tns:DequeueRequest" minOccurs="0"/>
+	        <xs:element name="HelpRequest" type="tns:HelpRequest" minOccurs="0"/>
+	        <xs:element ref="tns:Errors" minOccurs="0"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="OperationRequest">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:HTTPHeaders" minOccurs="0"/>
+	        <xs:element name="RequestId" type="xs:string" minOccurs="0"/>
+	        <xs:element ref="tns:Arguments" minOccurs="0"/>
+	        <xs:element ref="tns:Errors" minOccurs="0"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="HTTPHeaders">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="Header" minOccurs="0" maxOccurs="unbounded">
+	          <xs:complexType>
+	            <xs:attribute name="Name" type="xs:string" use="required"/>
+	            <xs:attribute name="Value" type="xs:string" use="required"/>
+	          </xs:complexType>
+	        </xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="Arguments">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="Argument" maxOccurs="unbounded">
+	          <xs:complexType>
+	            <xs:attribute name="Name" type="xs:string" use="required"/>
+	            <xs:attribute name="Value" type="xs:string" use="required"/>
+	          </xs:complexType>
+	        </xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="Errors">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="Error" maxOccurs="unbounded">
+	          <xs:complexType>
+	            <xs:sequence>
+	              <xs:element name="Code" type="xs:string"/>
+	              <xs:element name="Message" type="xs:string"/>
+	            </xs:sequence>
+	          </xs:complexType>
+	        </xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="Help">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="SubscriptionId" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Validate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="XMLEscaping" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Shared" type="tns:HelpRequest" minOccurs="0"/>
+	        <xs:element name="Request" type="tns:HelpRequest" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:complexType name="HelpRequest">
+	    <xs:sequence>
+	      <xs:element name="About" type="xs:string" maxOccurs="unbounded"/>
+	      <xs:element name="HelpType" minOccurs="0">
+	        <xs:simpleType>
+	          <xs:restriction base="xs:string">
+	            <xs:enumeration value="Operation"/>
+	            <xs:enumeration value="ResponseGroup"/>
+	          </xs:restriction>
+	        </xs:simpleType>
+	      </xs:element>
+	      <xs:element name="ResponseGroup" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+	    </xs:sequence>
+	  </xs:complexType>
+	    
+	  <xs:element name="HelpResponse">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:OperationRequest" minOccurs="0"/>
+	        <xs:element ref="tns:Information" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="Information">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="tns:Request" minOccurs="0"/>
+	        <xs:element ref="tns:OperationInformation" minOccurs="0" maxOccurs="unbounded"/>
+	        <xs:element ref="tns:ResponseGroupInformation" minOccurs="0" maxOccurs="unbounded"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="OperationInformation">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="Name" type="xs:string" minOccurs="0"/>
+	        <xs:element name="Description" type="xs:string" minOccurs="0"/>
+	        <xs:element name="RequiredParameters" minOccurs="0">
+	          <xs:complexType>
+	            <xs:sequence>
+	              <xs:element name="Parameter" type="xs:string" maxOccurs="unbounded"/>
+	            </xs:sequence>
+	          </xs:complexType>
+	        </xs:element>
+	        <xs:element name="AvailableParameters" minOccurs="0">
+	          <xs:complexType>
+	            <xs:sequence>
+	              <xs:element name="Parameter" type="xs:string" maxOccurs="unbounded"/>
+	            </xs:sequence>
+	          </xs:complexType>
+	        </xs:element>
+	        <xs:element name="DefaultResponseGroups" minOccurs="0">
+	          <xs:complexType>
+	            <xs:sequence>
+	              <xs:element name="ResponseGroup" type="xs:string" maxOccurs="unbounded"/>
+	            </xs:sequence>
+	          </xs:complexType>
+	        </xs:element>
+	        <xs:element name="AvailableResponseGroups" minOccurs="0">
+	          <xs:complexType>
+	            <xs:sequence>
+	              <xs:element name="ResponseGroup" type="xs:string" maxOccurs="unbounded"/>
+	            </xs:sequence>
+	          </xs:complexType>
+	        </xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	    
+	  <xs:element name="ResponseGroupInformation">
+	    <xs:complexType>
+	      <xs:sequence>
+	        <xs:element name="Name" type="xs:string" minOccurs="0"/>
+	        <xs:element name="CreationDate" type="xs:string" minOccurs="0"/>
+	        <xs:element name="ValidOperations" minOccurs="0">
+	          <xs:complexType>
+	            <xs:sequence>
+	              <xs:element name="Operation" type="xs:string" maxOccurs="unbounded"/>
+	            </xs:sequence>
+	          </xs:complexType>
+	        </xs:element>
+	        <xs:element name="Elements" minOccurs="0">
+	          <xs:complexType>
+	            <xs:sequence>
+	              <xs:element name="Element" type="xs:string" maxOccurs="unbounded"/>
+	            </xs:sequence>
+	          </xs:complexType>
+	        </xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	
+	</xs:schema>  </types>
+
+ <message name="CreateQueueRequestMsg">
+    <part name="body" element="tns:CreateQueue"/>
+  </message>
+  <message name="CreateQueueResponseMsg">
+    <part name="body" element="tns:CreateQueueResponse"/>
+  </message>
+
+ <message name="ListMyQueuesRequestMsg">
+    <part name="body" element="tns:ListMyQueues"/>
+  </message>
+  <message name="ListMyQueuesResponseMsg">
+    <part name="body" element="tns:ListMyQueuesResponse"/>
+  </message>
+
+ <message name="DeleteQueueRequestMsg">
+    <part name="body" element="tns:DeleteQueue"/>
+  </message>
+  <message name="DeleteQueueResponseMsg">
+    <part name="body" element="tns:DeleteQueueResponse"/>
+  </message>
+
+ <message name="ConfigureQueueRequestMsg">
+    <part name="body" element="tns:ConfigureQueue"/>
+  </message>
+  <message name="ConfigureQueueResponseMsg">
+    <part name="body" element="tns:ConfigureQueueResponse"/>
+  </message>
+
+ <message name="EnqueueRequestMsg">
+    <part name="body" element="tns:Enqueue"/>
+  </message>
+  <message name="EnqueueResponseMsg">
+    <part name="body" element="tns:EnqueueResponse"/>
+  </message>
+
+ <message name="ReadRequestMsg">
+    <part name="body" element="tns:Read"/>
+  </message>
+  <message name="ReadResponseMsg">
+    <part name="body" element="tns:ReadResponse"/>
+  </message>
+
+ <message name="DequeueRequestMsg">
+    <part name="body" element="tns:Dequeue"/>
+  </message>
+  <message name="DequeueResponseMsg">
+    <part name="body" element="tns:DequeueResponse"/>
+  </message>
+
+  <message name="HelpRequestMsg">
+    <part name="body" element="tns:Help"/>
+  </message>
+    
+  <message name="HelpResponseMsg">
+    <part name="body" element="tns:HelpResponse"/>
+  </message>
+
+  <portType name="AWSSimpleQueueServicePortType">
+    
+    <operation name="CreateQueue">
+      <input message="tns:CreateQueueRequestMsg"/>
+      <output message="tns:CreateQueueResponseMsg"/>
+    </operation>
+
+    <operation name="ListMyQueues">
+      <input message="tns:ListMyQueuesRequestMsg"/>
+      <output message="tns:ListMyQueuesResponseMsg"/>
+    </operation>
+
+    <operation name="DeleteQueue">
+      <input message="tns:DeleteQueueRequestMsg"/>
+      <output message="tns:DeleteQueueResponseMsg"/>
+    </operation>
+
+    <operation name="ConfigureQueue">
+      <input message="tns:ConfigureQueueRequestMsg"/>
+      <output message="tns:ConfigureQueueResponseMsg"/>
+    </operation>
+
+    <operation name="Enqueue">
+      <input message="tns:EnqueueRequestMsg"/>
+      <output message="tns:EnqueueResponseMsg"/>
+    </operation>
+
+    <operation name="Read">
+      <input message="tns:ReadRequestMsg"/>
+      <output message="tns:ReadResponseMsg"/>
+    </operation>
+
+    <operation name="Dequeue">
+      <input message="tns:DequeueRequestMsg"/>
+      <output message="tns:DequeueResponseMsg"/>
+    </operation>
+
+    <operation name="Help">
+      <input message="tns:HelpRequestMsg"/>
+      <output message="tns:HelpResponseMsg"/>
+    </operation>
+
+  </portType>
+
+  <binding name="AWSSimpleQueueServiceBinding" type="tns:AWSSimpleQueueServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CreateQueue">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="ListMyQueues">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="DeleteQueue">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="ConfigureQueue">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="Enqueue">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="Read">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="Dequeue">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="Help">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+  </binding>
+
+ <service name="AWSSimpleQueueService">
+    <port name="AWSSimpleQueueServicePort" binding="tns:AWSSimpleQueueServiceBinding">
+      <soap:address location="http://webservices.amazon.com/onca/soap?Service=AWSSimpleQueueService"/>
+    </port>
+  </service>
+</definitions>

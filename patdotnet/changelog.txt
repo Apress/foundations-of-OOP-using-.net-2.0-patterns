@@ -1,0 +1,7 @@
+Release 0.7 2005-10-03
+----------------------
+* Initial release where source code is functional, but not organized.  To get
+an understanding of what the source code is doing look at the book:
+Foundations of Object Oriented Programming using .NET 2.0 Patterns published
+by Apress.  In the future I will work on making the source code more
+organized.  It also depends on the demands of the readers and clients.

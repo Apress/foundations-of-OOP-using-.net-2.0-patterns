@@ -1,0 +1,183 @@
+[Global]
+CurrentProject=../../devspace.commons/devspace.commons.vpj
+[ProjectDates]
+OOPUsingDotNetPatterns.vpj=20050427204005000
+../../2005-05-JAX/Devspace.Commons.vpj=20050427181847000
+../../devspace.commons/devspace.commons.vpj=20050513005050000
+[ActiveConfig]
+OOPUsingDotNetPatterns.vpj=Release
+../../2005-05-JAX/Devspace.Commons.vpj=Release
+../../devspace.commons/devspace.commons.vpj=Release
+[TreeExpansion2]
+- OOPUsingDotNetPatterns.vpj
+  + BasePatterns
+  + BookApplication
+    + Chap03
+      + Properties
+  + chap01
+  + chap02
+  + chap03
+  + Chap04.Application
+    + Properties
+    + wsdl
+  + Chap04.Emulator
+    + Properties
+  + Chap04.ExternalServers
+    + Properties
+  + Chap04.Microkernel
+    + Properties
+  + Chap04.Webservice
+    + Properties
+    + webservice
+  + Chap05.GenericGUI
+    + Properties
+  + Chap05.TranslationDefinitions
+    + Properties
+  + Chap05.TranslationImplementations
+    + Properties
+  + Loader.Test.Interface
+    + Properties
+  + MainApplication
+  + patterns
+  + postcon
+    + lab1.1
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.2
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.3
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.4
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab1.5
+      + DbgOut
+      + DbUserImpl
+      + UserMgr
+      + UserReference
+      + XMLUserImpl
+    + lab2.1
+    + lab2.2
+    + lab2.3
+    + lab2.4
+    + lab2.5
+    + lab2.6
+  + projects
+  + UMLDiagrams
+- ../../devspace.commons/devspace.commons.vpj
+  + ignore
+    + Dotnet.Commons.Collections
+      + Bag
+      + Hashtables
+      + List
+      + Sets
+    + Dotnet.Commons.Collections.Test
+      + Sets
+    + Dotnet.Commons.Configuration
+      + AppProfile
+    + Dotnet.Commons.Configuration.Test
+      + AppProfile
+    + Dotnet.Commons.Data
+      - Converter
+    + Dotnet.Commons.Data.Test
+      + Converter
+    + Dotnet.Commons.Data.Test.Web
+    + Dotnet.Commons.IO
+      + ReaderWriter
+    + Dotnet.Commons.Lang
+      + Builder
+      + GAC
+    + Dotnet.Commons.Lang.Test
+      + Builder
+      + GAC
+    + Dotnet.Commons.Logging
+      + Impl
+    + Dotnet.Commons.Logging.Test
+    + Dotnet.Commons.Reflection
+    + Dotnet.Commons.Reflection.Test
+    + Dotnet.Commons.Web
+    + Dotnet.Commons.Web.Test
+    + Dotnet.Commons.Web.UI
+      + WebControls
+        + Validators
+        + Validators.Designer
+    + Dotnet.Commons.Xml
+      + Serialization
+    + Dotnet.Commons.Xml.Test
+    + Dotnet.Commons.Xml.XmlDigester
+    + Dotnet.Commons.Xml.XmlDigester.Test
+  + src
+    - C5
+      + arrays
+      + hashing
+      + heaps
+      + linkedlists
+      + Test
+        + arrays
+        + hashing
+        + heaps
+        + linkedlists
+        + trees
+      + trees
+    - Devspace.Commons
+      - Collections
+      - Functors
+      - Mediator
+      - PipesFilters
+      + Properties
+      + TDD
+    - Devspace.Commons.Loader
+      - Properties
+      - testcall
+scroll:0
+[State]
+SCREEN: 1280 854 0 22 1280 806 0 0 N 0 0 0 0 952 474
+CWD: ../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Persistence.FunctionalTests/
+BUFFER: BN="../../../NHibernateExample/4.AddressComponent/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Location.cs"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C#	HM=0 MF=864 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.213 CL=33 LE=0 CX=33 CY=12 WI=5 BI=27 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Location.hbm.xml"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=XML	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=70 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=26 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Repository.cs"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C#	HM=0 MF=864 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=6 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Persistence.FunctionalTests/LocationPersistenceFixture.cs"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C#	HM=0 MF=864 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=28 HT=0 HN=0 HF=0 HC=4
+WINDOW: 50 50 642 319 0 0 N  WF=0 WT=3 "Default Fixed Font,10,0,1"
+BUFFER: BN="../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Repository.cs"
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=161 BI=6 HT=0 HN=0 HF=0 HC=4
+WINDOW: 25 25 642 319 0 0 N  WF=0 WT=1 "Default Unicode Font,10,0,1"
+BUFFER: BN="../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Location.hbm.xml"
+VIEW: LN=.0 CL=1 LE=0 CX=0 CY=0 WI=162 BI=26 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 642 320 0 0 N  WF=0 WT=2 "Default Fixed Font,10,0,1"
+BUFFER: BN="../../../NHibernateExample/4.AddressComponent/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Location.cs"
+VIEW: LN=.213 CL=33 LE=0 CX=33 CY=12 WI=14 BI=27 HT=0 HN=0 HF=0 HC=4
+WINDOW: 75 75 642 319 0 0 M  WF=0 WT=4 "Default Fixed Font,10,0,1"
+BUFFER: BN="../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Persistence.FunctionalTests/LocationPersistenceFixture.cs"
+VIEW: LN=.2141 CL=1 LE=0 CX=1 CY=12 WI=164 BI=28 HT=0 HN=0 HF=0 HC=4
+FILEHIST: 9
+../../devspace.commons/build.xml
+build.xml
+../../../../apps/scripts/buildenv.sh
+/Library/Frameworks/Firebird.framework/Versions/A/Firebird
+../../devspace.commons/src/Devspace.Commons/Automators/extensions.cs
+../../../NHibernateExample/4.AddressComponent/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Location.cs
+../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Location.hbm.xml
+../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Domain/Repository.cs
+../../../NHibernateExample/5.Speaker/NHibernateExample.SpeakerBureau.Domain/NHibernateExample.SpeakerBureau.Persistence.FunctionalTests/LocationPersistenceFixture.cs

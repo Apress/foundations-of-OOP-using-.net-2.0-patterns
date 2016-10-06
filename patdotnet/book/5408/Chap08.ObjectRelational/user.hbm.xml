@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0">
+    <class name="NHibernate.Examples.QuickStart.User, Chap08.ObjectRelational" table="USERS">
+        <id name="Id" column="LOGONID" type="String" length="20">
+            <generator class="assigned" />
+        </id>
+        <property name="UserName" column= "NAME" type="String" length="40"/>
+        <property name="Password" column= "PASSWD" type="String" length="20"/>
+        <property name="EmailAddress" column= "EMAILADDRESS" type="String" length="40"/>
+    </class>
+
+</hibernate-mapping>
+

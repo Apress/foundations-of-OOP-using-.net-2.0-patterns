@@ -1,0 +1,387 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Release"
+		OutputFile=""
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir=".">
+				<Exec CmdLine="antmake -emacs -f build.xml chap05"/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='"OOPUsingDotNetPatterns.exe"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<CustomFolders>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if"/>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters="">
+		</Folder>
+	</CustomFolders>
+	<Files AutoFolders="DirectoryView">
+		<Folder Name="BasePatterns">
+			<F N="BasePatterns/adaptor.cs"/>
+			<F N="BasePatterns/allCalls.cs"/>
+			<F N="BasePatterns/AssemblyInfo.cs"/>
+			<F N="BasePatterns/bridge.cs"/>
+			<F N="BasePatterns/builder.cs"/>
+			<F N="BasePatterns/Command.cs"/>
+			<F N="BasePatterns/composite.cs"/>
+			<F N="BasePatterns/Decorator.cs"/>
+			<F N="BasePatterns/documentation.cs"/>
+			<F N="BasePatterns/Factory.cs"/>
+			<F N="BasePatterns/granularization.cs"/>
+			<F N="BasePatterns/Iterator.cs"/>
+			<F N="BasePatterns/main.cs"/>
+			<F N="BasePatterns/observer.cs"/>
+			<F N="BasePatterns/ProducerConsumer.cs"/>
+			<F N="BasePatterns/prototype.cs"/>
+			<F N="BasePatterns/proxy.cs"/>
+			<F N="BasePatterns/ReaderWriter.cs"/>
+			<F N="BasePatterns/SimpleThread.cs"/>
+			<F N="BasePatterns/singleton.cs"/>
+			<F N="BasePatterns/state.cs"/>
+		</Folder>
+		<Folder Name="BookApplication">
+			<Folder Name="Chap03">
+				<Folder Name="Properties">
+					<F N="BookApplication/Chap03/Properties/AssemblyInfo.cs"/>
+				</Folder>
+				<F N="BookApplication/Chap03/implementations.cs"/>
+				<F N="BookApplication/Chap03/main.cs"/>
+				<F N="BookApplication/Chap03/mockobjects.cs"/>
+				<F N="BookApplication/Chap03/tests.cs"/>
+			</Folder>
+		</Folder>
+		<Folder Name="chap01">
+			<F N="chap01/assembly1.cs"/>
+			<F N="chap01/assembly1_second.cs"/>
+			<F N="chap01/assembly2.cs"/>
+			<F N="chap01/asynchronous.cs"/>
+			<F
+				N="chap01/build.xml"
+				Type="Ant"/>
+			<F N="chap01/generics.cs"/>
+			<F N="chap01/inheritance.cs"/>
+			<F N="chap01/samples.cs"/>
+		</Folder>
+		<Folder Name="chap02">
+			<F
+				N="chap02/build.xml"
+				Type="Ant"/>
+			<F N="chap02/main.cs"/>
+			<F N="chap02/mainnunit.cs"/>
+		</Folder>
+		<Folder Name="chap03">
+			<F
+				N="chap03/build.xml"
+				Type="Ant"/>
+			<F N="chap03/implementations.cs"/>
+			<F N="chap03/main.cs"/>
+			<F N="chap03/mockobjects.cs"/>
+			<F N="chap03/tests.cs"/>
+		</Folder>
+		<Folder Name="Chap04.Application">
+			<Folder Name="Properties">
+				<F N="Chap04.Application/Properties/AssemblyInfo.cs"/>
+			</Folder>
+			<Folder Name="wsdl">
+				<F N="Chap04.Application/wsdl/AWSECommerceService.cs"/>
+			</Folder>
+			<F N="Chap04.Application/pipesandfilters.cs"/>
+			<F N="Chap04.Application/Program.cs"/>
+			<F N="Chap04.Application/tests.cs"/>
+		</Folder>
+		<Folder Name="Chap04.Emulator">
+			<Folder Name="Properties">
+				<F N="Chap04.Emulator/Properties/AssemblyInfo.cs"/>
+			</Folder>
+			<F N="Chap04.Emulator/mkemulator.cs"/>
+			<F N="Chap04.Emulator/tests.cs"/>
+		</Folder>
+		<Folder Name="Chap04.ExternalServers">
+			<Folder Name="Properties">
+				<F N="Chap04.ExternalServers/Properties/AssemblyInfo.cs"/>
+			</Folder>
+			<F N="Chap04.ExternalServers/mkservers.cs"/>
+		</Folder>
+		<Folder Name="Chap04.Microkernel">
+			<Folder Name="Properties">
+				<F N="Chap04.Microkernel/Properties/AssemblyInfo.cs"/>
+			</Folder>
+			<F N="Chap04.Microkernel/internalservers.cs"/>
+			<F N="Chap04.Microkernel/mkkernel.cs"/>
+			<F N="Chap04.Microkernel/tests.cs"/>
+		</Folder>
+		<Folder Name="Chap04.Webservice">
+			<Folder Name="Properties">
+				<F N="Chap04.Webservice/Properties/AssemblyInfo.cs"/>
+			</Folder>
+			<Folder Name="webservice">
+				<F N="Chap04.Webservice/webservice/TestService.cs"/>
+				<F N="Chap04.Webservice/webservice/TestServiceInterfaces.cs"/>
+			</Folder>
+			<F N="Chap04.Webservice/tests.cs"/>
+			<F N="Chap04.Webservice/webservice.cs"/>
+		</Folder>
+		<Folder Name="Chap05.GenericGUI">
+			<Folder Name="Properties">
+				<F N="Chap05.GenericGUI/Properties/AssemblyInfo.cs"/>
+				<F N="Chap05.GenericGUI/Properties/Resources.Designer.cs"/>
+				<F N="Chap05.GenericGUI/Properties/Settings.Designer.cs"/>
+			</Folder>
+			<F N="Chap05.GenericGUI/BasicForm.cs"/>
+			<F N="Chap05.GenericGUI/BasicForm.Designer.cs"/>
+			<F N="Chap05.GenericGUI/businessabstractions.cs"/>
+			<F N="Chap05.GenericGUI/FormAdaptable.cs"/>
+			<F N="Chap05.GenericGUI/FormAdaptable.Designer.cs"/>
+			<F N="Chap05.GenericGUI/FormUsingLoadable.cs"/>
+			<F N="Chap05.GenericGUI/FormUsingLoadable.Designer.cs"/>
+			<F N="Chap05.GenericGUI/Program.cs"/>
+			<F N="Chap05.GenericGUI/wxwindows.cs"/>
+		</Folder>
+		<Folder Name="Chap05.TranslationDefinitions">
+			<Folder Name="Properties">
+				<F N="Chap05.TranslationDefinitions/Properties/AssemblyInfo.cs"/>
+			</Folder>
+			<F N="Chap05.TranslationDefinitions/definitions.cs"/>
+		</Folder>
+		<Folder Name="Chap05.TranslationImplementations">
+			<Folder Name="Properties">
+				<F N="Chap05.TranslationImplementations/Properties/AssemblyInfo.cs"/>
+			</Folder>
+			<F N="Chap05.TranslationImplementations/implementations.cs"/>
+		</Folder>
+		<Folder Name="Loader.Test.Interface">
+			<Folder Name="Properties">
+				<F N="Loader.Test.Interface/Properties/AssemblyInfo.cs"/>
+			</Folder>
+		</Folder>
+		<Folder Name="MainApplication">
+			<F N="MainApplication/AssemblyInfo.cs"/>
+			<F N="MainApplication/Main.cs"/>
+		</Folder>
+		<Folder Name="patterns">
+			<F N="patterns/adaptor.cs"/>
+			<F N="patterns/allCalls.cs"/>
+			<F N="patterns/AssemblyInfo.cs"/>
+			<F N="patterns/bridge.cs"/>
+			<F N="patterns/builder.cs"/>
+			<F N="patterns/Class1.cs"/>
+			<F N="patterns/Command.cs"/>
+			<F N="patterns/composite.cs"/>
+			<F N="patterns/Decorator.cs"/>
+			<F N="patterns/documentation.cs"/>
+			<F N="patterns/Factory.cs"/>
+			<F N="patterns/granularization.cs"/>
+			<F N="patterns/Iterator.cs"/>
+			<F N="patterns/main.cs"/>
+			<F N="patterns/observer.cs"/>
+			<F N="patterns/ProducerConsumer.cs"/>
+			<F N="patterns/prototype.cs"/>
+			<F N="patterns/proxy.cs"/>
+			<F N="patterns/ReaderWriter.cs"/>
+			<F N="patterns/SimpleThread.cs"/>
+			<F N="patterns/singleton.cs"/>
+			<F N="patterns/state.cs"/>
+		</Folder>
+		<Folder Name="postcon">
+			<Folder Name="lab1.1">
+				<Folder Name="DbgOut">
+					<F N="postcon/lab1.1/DbgOut/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.1/DbgOut/MyClass.cs"/>
+				</Folder>
+				<Folder Name="DbUserImpl">
+					<F N="postcon/lab1.1/DbUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.1/DbUserImpl/MyClass.cs"/>
+				</Folder>
+				<Folder Name="UserMgr">
+					<F N="postcon/lab1.1/UserMgr/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.1/UserMgr/Main.cs"/>
+				</Folder>
+				<Folder Name="UserReference">
+					<F N="postcon/lab1.1/UserReference/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.1/UserReference/MyClass.cs"/>
+				</Folder>
+				<Folder Name="XMLUserImpl">
+					<F N="postcon/lab1.1/XMLUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.1/XMLUserImpl/MyClass.cs"/>
+				</Folder>
+			</Folder>
+			<Folder Name="lab1.2">
+				<Folder Name="DbgOut">
+					<F N="postcon/lab1.2/DbgOut/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.2/DbgOut/MyClass.cs"/>
+				</Folder>
+				<Folder Name="DbUserImpl">
+					<F N="postcon/lab1.2/DbUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.2/DbUserImpl/MyClass.cs"/>
+				</Folder>
+				<Folder Name="UserMgr">
+					<F N="postcon/lab1.2/UserMgr/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.2/UserMgr/Main.cs"/>
+				</Folder>
+				<Folder Name="UserReference">
+					<F N="postcon/lab1.2/UserReference/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.2/UserReference/MyClass.cs"/>
+				</Folder>
+				<Folder Name="XMLUserImpl">
+					<F N="postcon/lab1.2/XMLUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.2/XMLUserImpl/MyClass.cs"/>
+				</Folder>
+			</Folder>
+			<Folder Name="lab1.3">
+				<Folder Name="DbgOut">
+					<F N="postcon/lab1.3/DbgOut/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.3/DbgOut/MyClass.cs"/>
+				</Folder>
+				<Folder Name="DbUserImpl">
+					<F N="postcon/lab1.3/DbUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.3/DbUserImpl/MyClass.cs"/>
+				</Folder>
+				<Folder Name="UserMgr">
+					<F N="postcon/lab1.3/UserMgr/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.3/UserMgr/Main.cs"/>
+				</Folder>
+				<Folder Name="UserReference">
+					<F N="postcon/lab1.3/UserReference/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.3/UserReference/MyClass.cs"/>
+				</Folder>
+				<Folder Name="XMLUserImpl">
+					<F N="postcon/lab1.3/XMLUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.3/XMLUserImpl/MyClass.cs"/>
+					<F N="postcon/lab1.3/XMLUserImpl/some.identifier.xml"/>
+				</Folder>
+			</Folder>
+			<Folder Name="lab1.4">
+				<Folder Name="DbgOut">
+					<F N="postcon/lab1.4/DbgOut/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.4/DbgOut/MyClass.cs"/>
+				</Folder>
+				<Folder Name="DbUserImpl">
+					<F N="postcon/lab1.4/DbUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.4/DbUserImpl/MyClass.cs"/>
+				</Folder>
+				<Folder Name="UserMgr">
+					<F N="postcon/lab1.4/UserMgr/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.4/UserMgr/Main.cs"/>
+				</Folder>
+				<Folder Name="UserReference">
+					<F N="postcon/lab1.4/UserReference/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.4/UserReference/MyClass.cs"/>
+				</Folder>
+				<Folder Name="XMLUserImpl">
+					<F N="postcon/lab1.4/XMLUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.4/XMLUserImpl/MyClass.cs"/>
+				</Folder>
+				<F N="postcon/lab1.4/some.identifier.xml"/>
+			</Folder>
+			<Folder Name="lab1.5">
+				<Folder Name="DbgOut">
+					<F N="postcon/lab1.5/DbgOut/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.5/DbgOut/MyClass.cs"/>
+				</Folder>
+				<Folder Name="DbUserImpl">
+					<F N="postcon/lab1.5/DbUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.5/DbUserImpl/MyClass.cs"/>
+				</Folder>
+				<Folder Name="UserMgr">
+					<F N="postcon/lab1.5/UserMgr/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.5/UserMgr/Main.cs"/>
+				</Folder>
+				<Folder Name="UserReference">
+					<F N="postcon/lab1.5/UserReference/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.5/UserReference/MyClass.cs"/>
+				</Folder>
+				<Folder Name="XMLUserImpl">
+					<F N="postcon/lab1.5/XMLUserImpl/AssemblyInfo.cs"/>
+					<F N="postcon/lab1.5/XMLUserImpl/MyClass.cs"/>
+				</Folder>
+				<F N="postcon/lab1.5/some.identifier.xml"/>
+			</Folder>
+			<Folder Name="lab2.1">
+				<F N="postcon/lab2.1/main.cs"/>
+			</Folder>
+			<Folder Name="lab2.2">
+				<F N="postcon/lab2.2/main.cs"/>
+			</Folder>
+			<Folder Name="lab2.3">
+				<F N="postcon/lab2.3/main.cs"/>
+			</Folder>
+			<Folder Name="lab2.4">
+				<F N="postcon/lab2.4/main.cs"/>
+			</Folder>
+			<Folder Name="lab2.5">
+				<F N="postcon/lab2.5/main.cs"/>
+			</Folder>
+			<Folder Name="lab2.6">
+				<F N="postcon/lab2.6/main.cs"/>
+			</Folder>
+		</Folder>
+		<Folder Name="projects">
+			<F N="projects/chap05.xml"/>
+		</Folder>
+		<Folder Name="UMLDiagrams">
+			<F N="UMLDiagrams/AnotherClass.cs"/>
+			<F N="UMLDiagrams/AssemblyInfo.cs"/>
+			<F N="UMLDiagrams/Class1.cs"/>
+		</Folder>
+		<F N="ant-config.xml"/>
+		<F N="base-targets.xml"/>
+		<F
+			N="build.xml"
+			Type="Ant"/>
+		<F N="documentation.xml"/>
+		<F N="linux-config.xml"/>
+		<F N="osx-config.xml"/>
+	</Files>
+</Project>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<project name="Chapter03" default="build" basedir=".">
+    <target name="init">
+    </target>
+    <target name="compile" depends="init">
+        <echo message="Building the main application" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4" 
+            unsafe="false" targetType="exe" incremental="false" 
+            mainClass = "MainApp" destFile="${project.builddir}/chap03.exe" > 
+            <src dir=".">
+                <include name="main.cs" />
+                <include name="tests.cs" />
+                <include name="implementations.cs" />
+                <include name="mockobjects.cs" />
+            </src>
+            <reference file="${project.builddir}/tracer.dll" /> 
+            <reference file="${project.homedir}/apps/nunit-2.2.0/bin/nunit.core.dll" />
+            <reference file="${project.homedir}/apps/nunit-2.2.0/bin/nunit.framework.dll" />
+            <reference file="${project.homedir}/apps/nunit-2.2.0/bin/nunit.util.dll" />
+            <!--<reference file="${project.log4netdir}/log4net.dll" /> -->
+            <define name="RELEASE" /> 
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="def3" unless="def3.property"/> 
+            <define name="GenericsSupported" />
+        </csc> 
+        <echo message="done..." />
+    </target>
+    <target name="build" depends="compile">
+    </target>
+</project>
+

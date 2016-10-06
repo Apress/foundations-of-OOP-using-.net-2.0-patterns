@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project name="Chapter02" default="build" basedir=".">
+    <target name="init">
+    </target>
+    <target name="compile" depends="init">
+        <echo message="Building the main application" />
+        <csc target="exe" output="${project.builddir}/chap02.exe" debug="${project.build.config}">
+            <sources>
+                <include name="**/*.cs" />
+            </sources>
+            <references>
+                <include name="System.dll" />
+                <include name="System.Data.dll" />
+                <include name="${project.log4netdir}/log4net.dll" />
+                <include name="${project.builddir}/tracer.dll" />
+            </references>
+        </csc>
+        <echo message="done..." />
+    </target>
+    <target name="build" depends="compile">
+    </target>
+</project>
+

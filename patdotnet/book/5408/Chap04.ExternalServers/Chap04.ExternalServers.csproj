@@ -1,0 +1,70 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProductVersion>8.0.41202</ProductVersion>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{2FAE2BA3-B12F-450F-9354-09DF756FB0AF}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Chap04.ExternalServers</RootNamespace>
+        <AssemblyName>Chap04.ExternalServers</AssemblyName>
+        <StartupObject/>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>..\..\bin\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+        <DebugSymbols>false</DebugSymbols>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="nunit.framework, Version=2.2.2.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+            <HintPath>..\..\..\..\2005-08-Basta\tutorial\NUnit2.2.2\bin\nunit.framework.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="mkservers.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Chap04.Microkernel\Chap04.Microkernel.csproj">
+            <Project>{F6A028FB-60BF-4222-8754-B3520E85A3B7}</Project>
+            <Name>Chap04.Microkernel</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets"/>
+    <ItemGroup>
+        <ProjectReference Include="..\Chap04.Microkernel\Chap04.Microkernel.csproj">
+            <Name>Chap04.Microkernel</Name>
+            <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+            <Project>{F6A028FB-60BF-4222-8754-B3520E85A3B7}</Project>
+        </ProjectReference>
+        <ProjectReference Include="..\..\..\..\devspace.commons\src\Devspace.Commons\Devspace.Commons.csproj">
+            <Name>Devspace.Commons</Name>
+            <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+            <Project>{7D548458-28EA-49EE-8B18-8068D3D9DE93}</Project>
+        </ProjectReference>
+        <ProjectReference Include="..\..\..\..\devspace.commons\src\Devspace.Commons.Loader\Devspace.Commons.Loader.csproj">
+            <Name>Devspace.Commons.Loader</Name>
+            <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+            <Project>{2D2695D6-B450-45CF-A037-A1E52043B3CD}</Project>
+        </ProjectReference>
+    </ItemGroup>
+</Project>

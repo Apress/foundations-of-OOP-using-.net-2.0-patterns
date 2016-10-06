@@ -1,0 +1,6 @@
+<devspace:user xmlns:devspace="urn:devspace.com">
+    <devspace:name>Christian Gross (from XML)</devspace:name>
+    <devspace:street>1 Street</devspace:street>
+    <devspace:city>Zurich</devspace:city>
+    <devspace:country>Switzerland</devspace:country>
+</devspace:user>

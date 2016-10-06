@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE project [
+        <!ENTITY linuxconfig SYSTEM "file:../linux-config.xml">
+        <!ENTITY osxconfig SYSTEM "file:../osx-config.xml">
+        <!ENTITY winconfig SYSTEM "file:../win-config.xml">
+]>
+<project name="devspace.commons project" default="build" basedir="${project.dir}">
+    &osxconfig;
+    <!--&linuxconfig;-->
+    <!--&winconfig;-->
+    <target name="init">
+    </target>
+    <target name="compile" depends="init">
+        <echo message="Building the translation definitions" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4" 
+            unsafe="false" targetType="exe" incremental="false" 
+            mainClass = "MainApp" destFile="${project.builddir}/chap05.translation.definitions.dll" > 
+            <src dir="Chap05.TranslationDefinitions">
+                <include name="properties/AssemblyInfo.cs" />
+                <include name="definitions.cs" />
+            </src>
+            <reference file="${commons.dir}/devspace.commons.dll" />
+            <reference file="${commons.dir}/devspace.commons.loader.dll" />
+            <reference file="${project.builddir}/tracer.dll" /> 
+            <reference file="${nunit.dir}/nunit.core.dll" />
+            <reference file="${nunit.dir}/nunit.framework.dll" />
+            <reference file="${nunit.dir}/nunit.util.dll" />
+            <define name="RELEASE" /> 
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="def3" unless="def3.property"/> 
+            <define name="GenericsSupported" />
+        </csc> 
+        <echo message="done..." />
+        <echo message="Building the translation implementations" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4" 
+            unsafe="false" targetType="exe" incremental="false" 
+            mainClass = "MainApp" destFile="${project.builddir}/chap05.translation.implementations.dll" > 
+            <src dir="Chap05.TranslationImplementations">
+                <include name="properties/AssemblyInfo.cs" />
+                <include name="implementations.cs" />
+            </src>
+            <reference file="${project.builddir}/tracer.dll" /> 
+            <reference file="${nunit.dir}/nunit.core.dll" />
+            <reference file="${nunit.dir}/nunit.framework.dll" />
+            <reference file="${nunit.dir}/nunit.util.dll" />
+            <define name="RELEASE" /> 
+            <define name="DEBUG" if="project.build.config"/> 
+            <define name="def3" unless="def3.property"/> 
+            <define name="GenericsSupported" />
+        </csc> 
+        <echo message="done..." />
+    </target>
+    <target name="build" depends="compile">
+    </target>
+</project>
+
+

@@ -1,0 +1,1 @@
+Error (Cannot divide by zero)

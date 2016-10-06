@@ -1,0 +1,7 @@
+    <property name="home.dir" value="/home/cgross" />
+    <property name="nunit.dir" value="${home.dir}/apps/nunit/bin" />
+    <property name="log4net.dir" value="${home.dir}/apps/log4net/bin/mono/1.0/release" />
+    <property name="project.dir" value="${home.dir}/documents/active/oop-using-net-patterns" />
+    <property name="project.build.debug" value="true" />
+    <property name="project.builddir" value="${project.dir}/bin" />
+    <property name="devspace.commons.dir" value="${home.dir}/documents/active/devspace.commons/lib" />

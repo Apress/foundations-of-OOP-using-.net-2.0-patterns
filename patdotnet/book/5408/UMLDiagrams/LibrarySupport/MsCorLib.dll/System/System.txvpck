@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="ha1ijsy49qa1gyl_v">
+    <property name="$name" value="System" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="msil:e_class:lib:MsCorLib.dll:System.Int32">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

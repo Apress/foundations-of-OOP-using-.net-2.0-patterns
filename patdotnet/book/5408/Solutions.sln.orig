@@ -1,0 +1,83 @@
+<<<<<<< .mine
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devspace.Commons", "..\..\devspace.commons\src\Devspace.Commons\Devspace.Commons.csproj", "{7D548458-28EA-49EE-8B18-8068D3D9DE93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devspace.Commons.Loader", "..\..\devspace.commons\src\Devspace.Commons.Loader\Devspace.Commons.Loader.csproj", "{2D2695D6-B450-45CF-A037-A1E52043B3CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "BasePatterns\Patterns.csproj", "{9971152C-8C18-4BBB-A62F-04AFE7CC2C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap08_Serialization", "Chap08.Serialization/Chap08.Serialization.csproj", "{5A5E503B-2444-4934-B63B-3F4DE16E12BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap08_Memento", "Chap08.Memento/Chap08.Memento.csproj", "{B54A6A7B-D6C4-4FA7-A30C-849BCF06A453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap08_Visitor", "Chap08.Visitor/Chap08.Visitor.csproj", "{3B27C6C3-F84C-4DAE-AEC9-66444490FFF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap08_ObjectRelational", "Chap08.ObjectRelational/Chap08.ObjectRelational.csproj", "{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D548458-28EA-49EE-8B18-8068D3D9DE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D548458-28EA-49EE-8B18-8068D3D9DE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D548458-28EA-49EE-8B18-8068D3D9DE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D548458-28EA-49EE-8B18-8068D3D9DE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2695D6-B450-45CF-A037-A1E52043B3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2695D6-B450-45CF-A037-A1E52043B3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2695D6-B450-45CF-A037-A1E52043B3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2695D6-B450-45CF-A037-A1E52043B3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9971152C-8C18-4BBB-A62F-04AFE7CC2C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9971152C-8C18-4BBB-A62F-04AFE7CC2C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9971152C-8C18-4BBB-A62F-04AFE7CC2C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9971152C-8C18-4BBB-A62F-04AFE7CC2C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A5E503B-2444-4934-B63B-3F4DE16E12BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5E503B-2444-4934-B63B-3F4DE16E12BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5E503B-2444-4934-B63B-3F4DE16E12BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5E503B-2444-4934-B63B-3F4DE16E12BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54A6A7B-D6C4-4FA7-A30C-849BCF06A453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54A6A7B-D6C4-4FA7-A30C-849BCF06A453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54A6A7B-D6C4-4FA7-A30C-849BCF06A453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54A6A7B-D6C4-4FA7-A30C-849BCF06A453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B27C6C3-F84C-4DAE-AEC9-66444490FFF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B27C6C3-F84C-4DAE-AEC9-66444490FFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B27C6C3-F84C-4DAE-AEC9-66444490FFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B27C6C3-F84C-4DAE-AEC9-66444490FFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap08.ObjectRelational", "..\..\..\..\..\..\..\Documents and Settings\cgross\Desktop\projects\oop-using-net-patterns\src\Chap08.ObjectRelational\Chap08.ObjectRelational.csproj", "{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap08_ORApplication", "Chap08.ORApplication\Chap08.ORApplication.csproj", "{81A227F3-6801-483C-8C2D-0CCE0E2718B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C949B2CB-2FFA-408B-AE60-AA2BB08FAE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A227F3-6801-483C-8C2D-0CCE0E2718B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A227F3-6801-483C-8C2D-0CCE0E2718B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A227F3-6801-483C-8C2D-0CCE0E2718B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A227F3-6801-483C-8C2D-0CCE0E2718B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+>>>>>>> .r34

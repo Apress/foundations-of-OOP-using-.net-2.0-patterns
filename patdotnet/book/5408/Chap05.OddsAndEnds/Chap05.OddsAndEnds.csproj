@@ -1,0 +1,66 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProductVersion>8.0.50215</ProductVersion>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{F9DD4A70-BC1E-48AA-82F8-8960B9326D8C}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Chap05.OddsAndEnds</RootNamespace>
+        <AssemblyName>Chap05.OddsAndEnds</AssemblyName>
+        <StartupObject/>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>..\..\lib\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+        <DebugSymbols>false</DebugSymbols>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="nunit.framework, Version=2.2.2.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+            <HintPath>..\..\..\..\2005-08-Basta\tutorial\NUnit2.2.2\bin\nunit.framework.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="businessabstractions.cs"/>
+        <Compile Include="chainofresponsibility.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="tests.cs"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
+    <ItemGroup>
+        <ProjectReference Include="../../../devspace.commons/src/Devspace.Commons/Devspace.Commons.csproj">
+            <Name>Devspace.Commons</Name>
+            <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+            <Project>{7D548458-28EA-49EE-8B18-8068D3D9DE93}</Project>
+        </ProjectReference>
+        <ProjectReference Include="../../../devspace.commons/src/Devspace.Commons.Loader/Devspace.Commons.Loader.csproj">
+            <Name>Devspace.Commons.Loader</Name>
+            <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+            <Project>{2D2695D6-B450-45CF-A037-A1E52043B3CD}</Project>
+        </ProjectReference>
+        <ProjectReference Include="..\Chap05.TranslationDefinitions\Chap05.TranslationDefinitions.csproj">
+            <Name>Chap05.TranslationDefinitions</Name>
+            <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+            <Project>{717D07EE-FB70-49E2-9EEF-3EE02FA51C36}</Project>
+        </ProjectReference>
+    </ItemGroup>
+</Project>

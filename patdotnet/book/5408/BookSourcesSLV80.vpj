@@ -1,0 +1,113 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/8.1/vpj.dtd">
+<Project
+	Version="8.1"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Release"
+		OutputFile="">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine="nant"/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='"BookSourcesSLV80.exe"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<CustomFolders>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if"/>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters="">
+		</Folder>
+	</CustomFolders>
+	<Files AutoFolders="DirectoryView">
+		<Folder Name="bin">
+			<F N="bin/chap02.exe.config"/>
+		</Folder>
+		<Folder Name="chap01">
+			<F N="chap01/assembly1.cs"/>
+			<F N="chap01/assembly1_second.cs"/>
+			<F N="chap01/assembly2.cs"/>
+			<F N="chap01/asynchronous.cs"/>
+			<F N="chap01/default.build"/>
+			<F N="chap01/generics.cs"/>
+			<F N="chap01/inheritance.cs"/>
+			<F N="chap01/samples.cs"/>
+		</Folder>
+		<Folder Name="chap02">
+			<F N="chap02/default.build"/>
+			<F N="chap02/main.cs"/>
+		</Folder>
+		<Folder Name="chap03">
+			<F
+				N="chap03/build.xml"
+				Type="Ant"/>
+			<F N="chap03/implementations.cs"/>
+			<F N="chap03/main.cs"/>
+			<F N="chap03/mockobjects.cs"/>
+			<F N="chap03/tests.cs"/>
+		</Folder>
+		<Folder Name="DbgOut">
+			<F N="DbgOut/AssemblyInfo.cs"/>
+			<F N="DbgOut/dbgmgr.cs"/>
+		</Folder>
+		<Folder Name="MainApplication">
+			<F N="MainApplication/AssemblyInfo.cs"/>
+			<F N="MainApplication/Main.cs"/>
+		</Folder>
+		<Folder Name="tracer">
+			<F N="tracer/assertion.cs"/>
+			<F N="tracer/definitions.cs"/>
+			<F N="tracer/implementations.cs"/>
+			<F N="tracer/trace.cs"/>
+		</Folder>
+		<F N="default.build"/>
+		<F N="nant.config"/>
+	</Files>
+</Project>

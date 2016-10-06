@@ -1,0 +1,5 @@
+..\..\lib\Devspace.Commons.dll
+..\..\lib\Devspace.Commons.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Devspace.Commons.dll
+obj\Debug\Devspace.Commons.pdb

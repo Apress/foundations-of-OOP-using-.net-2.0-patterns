@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="project-configuration">
+	<!-- Set build configuration -->                                         
+    <property name="project.userdir" value="/Users/cgross/Desktop" />
+    <!--<property name="project.userdir" value="C:/Documents and Settings/cgross/Desktop" />-->
+    <property name="project.homedir" value="${project.userdir}/active/oop-using-net-patterns" />
+    <property name="project.srcdir" value="${project.homedir}/src" />
+	<property name="project.build.config" value="true" />
+    <property name="project.build.debug" value="true" />
+    <property name="project.builddir" value="${project.srcdir}/bin" />
+    <!--<property name="project.log4netdir" value="${project.userdir}/core/log4net-1.2.0-beta8/bin/mono/1.0/debug" />-->
+    <!--<property name="project.log4netdir" value="${project.userdir}/active/oop-using-net-patterns/apps/log4net-1.2.0-beta8/bin/net/1.1/release" />-->
+    <property name="project.log4netdir" value="${project.homedir}/apps/log4net-1.2.0-beta8/bin/net/1.1/release" />
+    <property name="define" value="GenericsSupported=1" />
+</project>
+

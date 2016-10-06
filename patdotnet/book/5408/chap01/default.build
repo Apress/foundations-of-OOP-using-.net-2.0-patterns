@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="Chapter01" default="build" basedir=".">
+    <target name="init">
+    </target>
+    <target name="compile" depends="init">
+        <echo message="Building the first assembly" />
+        <csc target="library" output="${project.builddir}/assembly1chap01.dll" debug="${project.build.config}"
+            define="${define}">
+            <sources>
+                <include name="assembly1.cs" />
+                <include name="assembly1_second.cs" />
+            </sources>
+            <references>
+                <include name="System.dll" />
+                <include name="System.Data.dll" />
+                <include name="${project.builddir}/dbg.dll" />
+            </references>
+        </csc>
+        <echo message="done..." />
+        <echo message="Building the second assembly" />
+        <csc target="library" output="${project.builddir}/assembly2chap01.dll" debug="${project.build.config}"
+            define="${define}">
+            <sources>
+                <include name="assembly2.cs" />
+            </sources>
+            <references>
+                <include name="System.dll" />
+                <include name="System.Data.dll" />
+                <include name="${project.builddir}/dbg.dll" />
+                <include name="${project.builddir}/assembly1chap01.dll" />
+            </references>
+        </csc>
+        <echo message="done..." />
+        <echo message="Building the main application" />
+        <csc target="exe" output="${project.builddir}/chap01.exe" debug="${project.build.config}"
+            define="${define}">
+            <sources>
+                <include name="samples.cs" />
+                <include name="inheritance.cs" />
+                <include name="generics.cs" />
+                <include name="asynchronous.cs" />
+            </sources>
+            <references>
+                <include name="System.dll" />
+                <include name="System.Data.dll" />
+                <include name="${project.builddir}/dbg.dll" />
+                <include name="${project.builddir}/assembly1chap01.dll" />
+                <include name="${project.builddir}/assembly2chap01.dll" />
+            </references>
+        </csc>
+        <echo message="done..." />
+    </target>
+    <target name="build" depends="compile">
+    </target>
+</project>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<project name="Part1" default="compile" basedir=".">
+    <target name="compile">
+        <mcs target="exe" output="bin/Calculator.exe">
+            <sources>
+                <includes name="*.cs"/>
+            </sources>
+            <references>
+                <includes name="bin/DbgOut.dll" />
+            </references>
+        </mcs>
+    </target>
+</project>
+

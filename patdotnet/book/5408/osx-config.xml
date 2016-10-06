@@ -1,0 +1,12 @@
+	<!-- Set build configuration -->                   
+    <property name="home.dir" value="/Users/cgross" />
+    <property name="svn-srcs.dir" value="${home.dir}/Desktop/projects" />
+    <property name="project.dir" value="${svn-srcs.dir}/oop-using-net-patterns" />
+    <property name="project.srcdir" value="${project.dir}/src" />
+	<property name="project.build.config" value="true" />
+    <property name="project.build.debug" value="true" />
+    <property name="project.builddir" value="${project.dir}/bin" />
+    <property name="nunit.dir" value="${home.dir}/apps/nunit/bin" />
+    <property name="log4net.dir" value="${home.dir}/apps/log4net/bin/mono/1.0/release" />
+    <property name="commons.dir" value="${svn-srcs.dir}/devspace.commons/lib" />
+

@@ -1,0 +1,68 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProductVersion>8.0.50215</ProductVersion>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{7D548458-28EA-49EE-8B18-8068D3D9DE93}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Devspace.Commons</RootNamespace>
+        <AssemblyName>Devspace.Commons</AssemblyName>
+        <StartupObject/>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>..\..\lib\</OutputPath>
+        <DefineConstants>DEBUG;TRACE;LOGCONSOLE;MONO</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+        <DebugSymbols>false</DebugSymbols>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="log4net, Version=1.2.9.0, Culture=neutral">
+            <HintPath>..\..\..\..\active-resources\incubating-log4net-1\bin\mono\1.0\debug\log4net.dll</HintPath>
+        </Reference>
+        <Reference Include="nunit.framework, Version=2.2.2.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+            <HintPath>..\..\..\..\active-resources\NUnit2.2.2\bin\nunit.framework.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Automators\extensions.cs"/>
+        <Compile Include="Automators\hashutilities.cs"/>
+        <Compile Include="ChainOfCommand\ChainOfCommand.cs"/>
+        <Compile Include="Collections\collectionsdefinitions.cs"/>
+        <Compile Include="Collections\collectionsimplementations.cs"/>
+        <Compile Include="Functors\functorsdefinitions.cs"/>
+        <Compile Include="Functors\transformers.cs"/>
+        <Compile Include="Mediator\mediator.cs"/>
+        <Compile Include="PipesFilters\pipesfilters.cs"/>
+        <Compile Include="Pool\objectpool.cs"/>
+        <Compile Include="Pool\objectpoolimpl.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="State\singleton.cs"/>
+        <Compile Include="State\state.cs"/>
+        <Compile Include="State\statemanager.cs"/>
+        <Compile Include="TDD\assertion.cs"/>
+        <Compile Include="TDD\definitions.cs"/>
+        <Compile Include="TDD\implementations.cs"/>
+        <Compile Include="TDD\trace.cs"/>
+        <Compile Include="tests.cs"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets"/>
+</Project>

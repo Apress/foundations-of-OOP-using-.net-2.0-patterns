@@ -1,0 +1,61 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProductVersion>8.0.41202</ProductVersion>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{2595CE51-B8FB-4546-A4F1-7E1CE76AF70D}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Chap05.TranslationImplementations</RootNamespace>
+        <AssemblyName>Chap05.TranslationImplementations</AssemblyName>
+        <StartupObject/>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>..\..\bin\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+        <DebugSymbols>false</DebugSymbols>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="implementations.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\devspace.commons\src\Devspace.Commons.Loader\Devspace.Commons.Loader.csproj">
+            <Project>{2D2695D6-B450-45CF-A037-A1E52043B3CD}</Project>
+            <Name>Devspace.Commons.Loader</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Chap05.TranslationDefinitions\Chap05.TranslationDefinitions.csproj">
+            <Project>{717D07EE-FB70-49E2-9EEF-3EE02FA51C36}</Project>
+            <Name>Chap05.TranslationDefinitions</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets"/>
+    <ItemGroup>
+        <ProjectReference Include="..\Chap05.TranslationDefinitions\Chap05.TranslationDefinitions.csproj">
+            <Name>Chap05.TranslationDefinitions</Name>
+            <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+            <Project>{717D07EE-FB70-49E2-9EEF-3EE02FA51C36}</Project>
+        </ProjectReference>
+    </ItemGroup>
+</Project>

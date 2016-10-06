@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project name="Part1" default="compile" basedir=".">
+    <target name="compile">
+        <mcs target="library" output="bin/DbgOut.dll">
+            <sources>
+                <includes name="DbgOut/*.cs"/>
+            </sources>
+        </mcs>
+        <mcs target="library" output="bin/UserReference.dll">
+            <sources>
+                <includes name="UserReference/*.cs"/>
+            </sources>
+            <references>
+                <includes name="bin/DbgOut.dll" />
+            </references>
+        </mcs>
+        <mcs target="library" output="bin/lib/XMLUserImpl.dll">
+            <sources>
+                <includes name="XMLUserImpl/*.cs"/>
+            </sources>
+            <references>
+                <includes name="bin/UserReference.dll" />
+                <includes name="bin/DbgOut.dll" />
+            </references>
+        </mcs>
+        <mcs target="library" output="bin/lib/DbUserImpl.dll">
+            <sources>
+                <includes name="DbUserImpl/*.cs"/>
+            </sources>
+            <references>
+                <includes name="bin/UserReference.dll" />
+                <includes name="bin/DbgOut.dll" />
+            </references>
+        </mcs>
+        <mcs target="exe" output="bin/UserMgr.exe">
+            <sources>
+                <includes name="UserMgr/*.cs"/>
+            </sources>
+            <references>
+                <includes name="bin/UserReference.dll" />
+                <includes name="bin/DbgOut.dll" />
+            </references>
+        </mcs>
+    </target>
+</project>
+

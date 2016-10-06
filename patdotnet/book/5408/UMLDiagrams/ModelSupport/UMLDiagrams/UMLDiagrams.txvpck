@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="3b1bbv6wm_v">
+    <property name="$name" value="UMLDiagrams" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="csharp:e_class:src:UMLDiagrams:UMLDiagrams.Class1">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="550,560,81,83" />
+      <reference referencedUin="csharp:e_method:src:UMLDiagrams:UMLDiagrams.Class1.Main(System.String[])" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:UMLDiagrams:UMLDiagrams.IComponent">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds_setted_by_user" value="True" />
+      <property name="foreground_color" value="0,0,0" />
+      <property name="background_color" value="255,255,255" />
+      <property name="bounds" value="460,270,110,66" />
+      <reference referencedUin="csharp:e_field:src:UMLDiagrams:UMLDiagrams.IComponent.GenericType" />
+      <reference referencedUin="csharp:l_ast:src:UMLDiagrams:UMLDiagrams.IComponent.GenericType">
+        <property name="sourceAnchor" value="570,302" />
+        <property name="targetAnchor" value="680,302" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="csharp:e_class:src:UMLDiagrams:UMLDiagrams.Chain">
+      <property name="$shortcutReference" value="true" />
+      <property name="foreground_color" value="0,0,0" />
+      <property name="background_color" value="255,255,255" />
+      <property name="bounds" value="200,300,157,83" />
+      <reference referencedUin="csharp:l_ast:src:UMLDiagrams:UMLDiagrams.Chain._reference">
+        <property name="sourceAnchor" value="357,318" />
+        <property name="targetAnchor" value="460,318" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="csharp:e_field:src:UMLDiagrams:UMLDiagrams.Chain._reference" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:UMLDiagrams:UMLDiagrams.IComponentStreaming">
+      <property name="$shortcutReference" value="true" />
+      <property name="foreground_color" value="0,0,0" />
+      <property name="background_color" value="255,255,255" />
+      <property name="bounds" value="440,90,138,66" />
+      <reference referencedUin="csharp:l_gnt:src:UMLDiagrams:UMLDiagrams.IComponentStreaming:UMLDiagrams.IComponent">
+        <property name="sourceAnchor" value="515,156" />
+        <property name="targetAnchor" value="515,270" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="csharp:e_class:src:UMLDiagrams:UMLDiagrams.ControlData">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds_setted_by_user" value="True" />
+      <property name="foreground_color" value="0,0,0" />
+      <property name="background_color" value="255,255,255" />
+      <property name="bounds" value="680,280,110,69" />
+    </reference>
+  </view>
+</nodeSet>

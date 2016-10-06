@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0">
+    <class name="Chap08.ObjectRelational.Comment, Chap08.ObjectRelational" table="COMMENTS">
+        <id name="ID">
+            <generator class="uuid.hex">
+                <param name="format">N</param>
+                <param name="separator">-</param>
+            </generator>
+        </id>
+        <property name="Text" column="COMMENT" />
+        <property name="WhoMadeComment" column="AUTHOR" />
+        <many-to-one name="Parent" class="Chap08.ObjectRelational.Book, Chap08.ObjectRelational" column="PARENT_ISBN" not-null="true" />
+    </class>
+</hibernate-mapping>
+

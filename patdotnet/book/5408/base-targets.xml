@@ -1,0 +1,32 @@
+    <target name="init">
+        <mkdir dir="../bin" />
+<!--        <echo message="Building the basic debug manager" />
+        <csc optimize="true" debug="${project.build.debug}" warnLevel="4"
+            unsafe="false" targetType="library" incremental="false"
+            destFile="${project.builddir}/dbg.dll" >
+            <src dir="${project.dir}/src/DbgOut">
+                <include name="dbgmgr.cs" />
+            </src>
+            <reference file="${testCSC.dll}" />
+            <define name="DEBUG" if="project.build.config"/>
+            <define name="def3" unless="def3.property"/>
+        </csc>
+        <echo message="done..." />
+        <echo message="Building the tracer assembly" />
+        <csc optimize="true" debug="${project.build.config}" warnLevel="4"
+            unsafe="false" targetType="library" incremental="false"
+            destFile="${project.builddir}/tracer.dll" >
+            <src dir="${project.dir}/src/tracer">
+                <include name="trace.cs" />
+                <include name="assertion.cs" />
+                <include name="definitions.cs" />
+                <include name="implementations.cs" />
+            </src>
+            <reference file="${log4net.dir}/log4net.dll" />
+            <define name="DEBUG" if="project.build.config"/>
+            <define name="LOGCONSOLE" />
+            <define name="def3" unless="def3.property"/>
+        </csc>
+        <echo message="done..." />-->
+    </target>
+
